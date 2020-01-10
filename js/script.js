@@ -31,20 +31,42 @@ var EncryptObj = {};
 
 function encrypt() {
   EncryptObj.word = document.getElementById('target03').value;
-  EncryptObj.wordStatic = EncryptObj.word;
   const word = EncryptObj.word;
+  const wordArray = word.split('');
 
-  let wordsWhitoutA = word.replace(word, 'EE12*7&&bgyW');
+  let encryptedWord = '';
 
-  document.getElementById("output").value = wordsWhitoutA;
+  for (let i = 0; i < wordArray.length; i++) {
+    const char = wordArray[i];
+    let result = char.charCodeAt(0);
+    let sum = (result + 30) * 10;
+    let encryptedChar = String.fromCharCode(sum);
+    
+    encryptedWord += encryptedChar; 
+  }
+  EncryptObj.wordStatic = encryptedWord;
+
+  document.getElementById("output").value = encryptedWord;
 }
 
 function decrypt() {
-  const word = EncryptObj.wordStatic;
+  EncryptObj.word = document.getElementById('target03').value;
+  const word = EncryptObj.word;
+  const wordArray = word.split('');
 
-  let wordsWhitoutA = word.replace('EE12*7&&bgyW', word);
+  let decryptedWord = '';
 
-  document.getElementById("output").value = wordsWhitoutA;
+  for (let i = 0; i < wordArray.length; i++) {
+    const char = wordArray[i];
+    let result = char.charCodeAt(0);
+    let sum = (result / 10) - 30;
+    let encryptedChar = String.fromCharCode(sum);
+    
+    decryptedWord += encryptedChar; 
+  }
+  EncryptObj.wordStatic = decryptedWord;
+
+  document.getElementById("output").value = decryptedWord;
 }
 
 //events
