@@ -1,0 +1,43 @@
+/* Assets */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+h1,h2,h3,p,a,li,input,label {
+  font-family: sans-serif;
+}
+
+#body {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#main-title {
+  justify-content: center;
+  align-items: center;
+}
+#main-title h1 {
+  font-size: 2rem;
+}
+#task-01 {
+  width: 80%;
+}
+#task-01 .column {
+  justify-content: center;
+  align-items: center;
+}
+#task-01 .column .text-wrapper h2 {
+  width: 100%;
+  /* text-align: center; */
+  font-size: 1.2rem;
+}
+#task-01 .column .text-wrapper p {
+  line-height: 1.2rem;
+}
