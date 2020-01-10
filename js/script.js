@@ -1,6 +1,10 @@
+//btns variables
 const btnOne = document.getElementById('action01');
 const btnTwo = document.getElementById('action02');
+const btnEnc = document.getElementById('encrypt');
+const btnDec = document.getElementById('decrypt');
 
+//task 01
 function removeA() {
   const words = document.getElementById('target01').innerHTML;
   let wordsWhitoutA = words.replace(/a/g, '');
@@ -8,8 +12,7 @@ function removeA() {
   document.getElementById("target01").innerHTML = wordsWhitoutA;
 }
 
-btnOne.addEventListener('click', removeA)
-
+//task 02
 function changeCharacter() {
   const words = document.getElementById('target02').innerHTML;
   let changeOne = document.getElementById('c1').value;
@@ -22,19 +25,30 @@ function changeCharacter() {
   document.getElementById("target02").innerHTML = wordsWhitoutA;
 }
 
-btnTwo.addEventListener('click', changeCharacter)
+//task 03
 
-function changeCharacter() {
-  const word = document.getElementById('target03').value;
-  const wordArray = word.split(' ');
-  let changeOne = document.getElementById('c3').value;
-  let changeTwo = document.getElementById('c4').value;
-  const change = param1; 
+var EncryptObj = {};
 
-  let regex = new RegExp(`[${change}+]`, 'g')
-  let wordsWhitoutA = words.replace(regex, `${param2}`);
+function encrypt() {
+  EncryptObj.word = document.getElementById('target03').value;
+  EncryptObj.wordStatic = EncryptObj.word;
+  const word = EncryptObj.word;
 
-  document.getElementById("target02").innerHTML = wordsWhitoutA;
+  let wordsWhitoutA = word.replace(word, 'EE12*7&&bgyW');
+
+  document.getElementById("output").value = wordsWhitoutA;
 }
 
+function decrypt() {
+  const word = EncryptObj.wordStatic;
+
+  let wordsWhitoutA = word.replace('EE12*7&&bgyW', word);
+
+  document.getElementById("output").value = wordsWhitoutA;
+}
+
+//events
+btnOne.addEventListener('click', removeA)
 btnTwo.addEventListener('click', changeCharacter)
+btnEnc.addEventListener('click', encrypt);
+btnDec.addEventListener('click', decrypt);

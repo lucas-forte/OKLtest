@@ -11,6 +11,7 @@ h1,h2,h3,p,a,li,input,label {
   font-family: sans-serif;
 }
 .btn {
+  cursor: pointer;
   text-align: center;
   margin: 1rem;
   padding: 1rem .7rem;
@@ -28,12 +29,20 @@ h1,h2,h3,p,a,li,input,label {
 }
 
 #body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0 auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+marquee {
+  width: 50%;
+  min-width: 650px;
 }
 #main-title {
   justify-content: center;
@@ -42,32 +51,34 @@ h1,h2,h3,p,a,li,input,label {
 #main-title h1 {
   font-size: 2rem;
 }
-#task-01 {
+#task {
   width: 80%;
 }
-#task-01 .column {
+#task .column {
   justify-content: center;
   align-items: center;
 }
-#task-01 .column .text-wrapper {
+#task .column .text-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#task-01 .column .text-wrapper h2 {
+#task .column .text-wrapper h2 {
   width: 100%;
-  /* text-align: center; */
+  color: white;
   font-size: 1.2rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000;
 }
-#task-01 .column .text-wrapper p {
+#task .column .text-wrapper p, 
+#task .column .text-wrapper label {
+  color: white;
   line-height: 1.2rem;
+  text-shadow: 1px 1px 2px #000;
+  font-weight: 600;
 }
-#task-02 .column .text-wrapper h2 {
-  width: 100%;
-  /* text-align: center; */
-  font-size: 1.2rem;
+#task .column .text-wrapper .btn-wrapper {
+  justify-content: space-evenly;
 }
-#task-02 .column .text-wrapper label {
-  line-height: 1.2rem;
-}
+
