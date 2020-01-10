@@ -10,6 +10,22 @@
 h1,h2,h3,p,a,li,input,label {
   font-family: sans-serif;
 }
+.btn {
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem .7rem;
+  border: 2px solid rgba(32, 173, 32, 0.349);
+  background-color: #176117;
+  color: white;
+  border-radius: 5px;
+  box-shadow: -2px -3px 3px transparent;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+.btn:hover {
+  box-shadow: 2px 3px 3px #555;
+}
 
 #body {
   margin: 0 auto;
@@ -33,11 +49,25 @@ h1,h2,h3,p,a,li,input,label {
   justify-content: center;
   align-items: center;
 }
+#task-01 .column .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #task-01 .column .text-wrapper h2 {
   width: 100%;
   /* text-align: center; */
   font-size: 1.2rem;
 }
 #task-01 .column .text-wrapper p {
+  line-height: 1.2rem;
+}
+#task-02 .column .text-wrapper h2 {
+  width: 100%;
+  /* text-align: center; */
+  font-size: 1.2rem;
+}
+#task-02 .column .text-wrapper label {
   line-height: 1.2rem;
 }
